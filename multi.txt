@@ -1,0 +1,19 @@
+[92m18:59:34 - LiteLLM:WARNING[0m: get_model_cost_map.py:271 - LiteLLM: Failed to fetch remote model cost map from https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000). Falling back to local backup.
+=== 第1轮（应问背景）===
+你好！我是遥感科研导师。开始之前，想先了解你的情况：
+1) 你之前接触过深度学习和计算机视觉吗？大概什么水平？
+2) 你现在最想做什么（理解概念 / 选方法 / 复现论文 / 改进自己的模型 / 写论文）？
+
+=== 第2轮（应带状态直接教学，不再问背景）===
+你好！欢迎进入遥感变化检测（Change Detection, CD）的世界。既然你已经有深度学习基础，但没接触过遥感，我们不需要从卷积神经网络（CNN）的底层原理讲起，而是直接聚焦于**“任务定义”**和**“数据形态”**这两个核心差异。
+
+很多初学者容易混淆这两者，因为它们在代码实现上看起来非常像：都是输入图像，输出像素级的掩膜（Mask）。但它们的**本质逻辑**完全不同。
+
+### 1. 核心区别总览：单时相 vs. 双/多时相
+
+这是最根本的区别，决定了后续所有模型架构的设计。
+
+| 维度 | 图像分割 (Image Segmentation) | 变化检测 (Change Detection) |
+| :--- | :--- | :--- |
+| **输入数据** | **单张**图像 ($I$) | **两张或多张**配准后的图像 ($I_1, I_2$) |
+| **关注

@@ -1,0 +1,23 @@
+# 敏感信息（本地环境变量，勿上传）
+.mentor_env
+*.env
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# 运行时缓存与索引（可重建）
+cache/
+cache_dpo/
+memory/
+
+# 论文全文语料（版权原因不入库，见 README）
+fulltext_txt/
+pdfs/
+
+# 日志
+*.log
+
+# 系统
+.DS_Store

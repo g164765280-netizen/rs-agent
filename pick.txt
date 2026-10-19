@@ -1,0 +1,17 @@
+[92m18:27:18 - LiteLLM:WARNING[0m: get_model_cost_map.py:271 - LiteLLM: Failed to fetch remote model cost map from https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000). Falling back to local backup.
+openai/qwen3.8-flash: content='F1 衡量分类结果中精确率与召回率的综合表现，而 IoU 衡量目标检测或分割中预测区域与真实区域的重叠程度。'  reasoning_len=109
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+openai/glm-5: ERROR litellm.APIError: APIError: OpenAIException - 暂无该模型访问权限，请到官网进行申请
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+openai/kimi-k2.5: ERROR litellm.APIError: APIError: OpenAIException - 暂无该模型访问权限，请到官网进行申请
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+openai/minimax-m2.5: ERROR litellm.APIError: APIError: OpenAIException - 暂无该模型访问权限，请到官网进行申请

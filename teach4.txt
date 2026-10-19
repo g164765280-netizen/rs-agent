@@ -1,0 +1,6 @@
+[92m18:29:35 - LiteLLM:WARNING[0m: get_model_cost_map.py:271 - LiteLLM: Failed to fetch remote model cost map from https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000). Falling back to local backup.
+**总览**：图像分割通常是对一张图做“每个像素属于什么类别”（如建筑、水体、道路）；变化检测是对同一区域两个时间的图做“哪里发生了变化”。
+
+**输入输出区别**：分割输入是单时相图像，输出是语义标签图；变化检测输入是配准后的双时相图像，输出是变化掩膜（变化/不变，或变化类型）。
+
+**难点区别**：

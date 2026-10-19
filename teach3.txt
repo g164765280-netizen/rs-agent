@@ -1,0 +1,16 @@
+[92m18:24:55 - LiteLLM:WARNING[0m: get_model_cost_map.py:271 - LiteLLM: Failed to fetch remote model cost map from https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000). Falling back to local backup.
+我们需要回答用户中文问题。用户是研一新生没接触遥感，问变化检测和图像分割区别。要求3-4小段简洁回答（总览/输入输出区别/难点区别/方法区别），结尾给一句可执行建议。需要遵循原则：先了解背景？用户已经给出背景研一新生没接触遥感。我们可以直接回答，但可能需要确认理解？但要求简洁，结尾给可执行建议。需要结构：总览/输入输出区别/难点区别/方法区别。领域知识：变化检测三种基础融合、Transformer路线、指标F1主指标、OA失真、实验坑。需要诚实，不确定明说。这里不涉及不确定。需要溯源提到方法/结论给出处。需要具体可执行建议。注意“先了解背景：首次对话先问知识水平/目标，再决定讲多深。”这里用户已经给了背景，但也许我们还是可以简短确认？但用户要求简洁回答，所以直接按新生水平讲，不必反问。结尾可执行建议：读FC-EF/FC-Siam-conc/FC-Siam-diff论文，用LEVIR-CD或WHU-CD数据集，指标F1。需要提到OA失真。我们可以这样组织：
+
+总览：变化检测是找出同一地区不同时相遥感影像之间“发生变化”的像素/区域，输出二值变化图；图像分割是对单张影像按语义类别划分，输出每个像素类别标签。变化检测可看作一种特殊分割，但核心是比较两期影像差异。
+
+输入输出区别：变化检测输入至少两张配准后的影像（T1、T2），输出变化/未变化二值图或变化类型图；语义分割输入单张影像，输出多类别语义图。变化检测的“变化”可能由多种地物转变造成，不是固定地物类别。
+
+难点区别：变化检测最大难点是伪变化：配准误差、季节/光照差异、传感器差异都会被误判为变化；变化像素通常占比很小，类别不平衡严重，所以OA会失真，主指标用F1。分割难点是边界精细、小目标、类别不平衡，但输入没有时相配准问题。
+
+方法区别：基础变化检测常用孪生网络：FC-EF（早融合）、FC-Siam-conc（孪生拼接）、FC-Siam-diff（孪生差分），核心是学习两期特征差异；现代方法如BIT用Transformer做token化+全局注意力，ChangeFormer做层次化多尺度。语义分割经典是U-Net/DeepLab系列，单流编码-解码。两者可共享编码器，但变化检测强调时序交互/差异建模。
+
+可执行建议：先跑通一个FC-Siam-diff在LEVIR-CD或WHU-CD上的复现，用F1作为主指标，不要只看OA；然后读BIT和ChangeFormer论文理解Transformer怎么做变化检测。
+
+需要控制在3-4小段。结尾一句可执行建议。可以分4段加结尾句。注意“总览/输入输出区别/难点区别/方法区别”四个小标题？用户说用3-4小段简洁回答（总览/输入输出区别/难点区别/方法区别），可以四段。结尾给一句可执行建议。可能可以不用小标题但按顺序。需要简洁。要提到论文/方法名给出处。比如Daudt et al. 2018 FC-EF等。BIT: Chen et al. 2021? BIT paper "Remote Sensing Image Change Detection with Transformers" by Hao Chen, et al. ChangeFormer: Bandara et al. 2022? "A Transformer-Based Siamese Network for Change Detection" maybe. 但可以只提方法名。需要诚实。可执行建议具体到复现XX/读XX论文/用什么指标。
+
+还要注意回答

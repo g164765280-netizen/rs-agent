@@ -1,0 +1,29 @@
+[92m20:42:47 - LiteLLM:WARNING[0m: get_model_cost_map.py:271 - LiteLLM: Failed to fetch remote model cost map from https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000). Falling back to local backup.
+问题: 论文《Semantic Change Detection with Asymmetric Siamese Networks》在 HRSCD 上报告的 miou 是多少？
+  gold值: 68.7  命中候选数: 1
+  候选值: ['68.7']
+  模型答: 68.7
+
+问题: 论文《Remote Sensing Image Change Detection with Transformers》在 LEVIR-CD 上报告的 iou 是多少？
+  gold值: 32  命中候选数: 2
+  候选值: ['32', '1']
+  模型答: 32
+
+问题: 论文《Remote Sensing Image Change Detection with Transformers》在 LEVIR-CD 上报告的 iou 是多少？
+  gold值: 1  命中候选数: 2
+  候选值: ['32', '1']
+  模型答: 32
+
+问题: 论文《DDPM-CD: Denoising Diffusion Probabilistic Models as Feature Extractors for Change Detection》在 LEVIR-CD 上报告的 oa 是多少？
+  gold值: 5  命中候选数: 1
+  候选值: ['5']
+  模型答: 5
+
+问题: 论文《Changer: Feature Interaction is What You Need for Change Detection》在 S2Looking 上报告的 f1 是多少？
+  gold值: 1  命中候选数: 3
+  候选值: ['1', '8', '67.61']
+  模型答: 根据提供的证据，无法直接找到论文《Changer: Feature Interaction is What You Need for Change Detection》在 S2Looking 数据集上报告的具体 F1 分数。
+
+证据分析如下：
+*   **[1]** 仅显示 "F1" 和数字 "1"
+

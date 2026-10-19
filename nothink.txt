@@ -1,0 +1,9 @@
+[92m18:50:29 - LiteLLM:WARNING[0m: get_model_cost_map.py:271 - LiteLLM: Failed to fetch remote model cost map from https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000). Falling back to local backup.
+opt= {'enable_thinking': False}
+  content_len= 89 reasoning_len= 0
+  content= 'IoU 衡量的是**单个预测框与真实框的空间重叠程度**（几何指标），而 F1 是综合了精确率和召回率的**分类性能指标**，用于评估模型在特定阈值下对正样本识别的整体平衡能力。'
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+opt= {'chat_template_kwargs': {'enable_thinking': False}} ERROR litellm.BadRequestError: OpenAIException - 未知请求字段：chat_template_kwargs

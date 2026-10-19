@@ -1,0 +1,13 @@
+[92m18:22:28 - LiteLLM:WARNING[0m: get_model_cost_map.py:271 - LiteLLM: Failed to fetch remote model cost map from https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000). Falling back to local backup.
+=== 模型: openai/deepseek-flash ===
+We need answer in Chinese. Need follow principles. First? They provided user knowledge level and goal, so no need ask? But principle says first understand background; already given. Need teach from basics to advanced, confirm understanding, executable next step, trace sources, honest. Need answer question: difference between change detection and ordinary image segmentation.
+
+We need craft structured: overview then layers. Need explain remote sensing change detection vs semantic segmentation. Key differences: input, task definition, output, labels, temporal dimension, alignment/registration, ch
+
+=== 模型: openai/kimi-k2.5 ===
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+ERROR: litellm.APIError: APIError: OpenAIException - 暂无该模型访问权限，请到官网进行申请
+

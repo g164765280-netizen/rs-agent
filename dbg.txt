@@ -1,0 +1,4 @@
+[92m18:16:59 - LiteLLM:WARNING[0m: get_model_cost_map.py:271 - LiteLLM: Failed to fetch remote model cost map from https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000). Falling back to local backup.
+content: '变化检测是对比多时相图像以识别发生变化的区域，而图像分割是将单幅图像划分为不同区域或目标。'
+reasoning_content: '我们需要回答中文问题：“变化检测和图像分割的区别？一句话”。需要简洁一句话。需要区分：变化检测是对比多时相图像识别变化区域；图像分割是将单幅图像划分为语义/对象区域。一句话概括区别：变化检测关注多时相图像间的差异/变化区域，图像分割关注单幅图像内不同区域/目标的划分。用户要求一句话，应简明。确保准确。'
+finish_reason: stop

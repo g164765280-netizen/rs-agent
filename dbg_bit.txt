@@ -1,0 +1,84 @@
+[92m13:16:22 - LiteLLM:WARNING[0m: get_model_cost_map.py:271 - LiteLLM: Failed to fetch remote model cost map from https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000). Falling back to local backup.
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+Traceback (most recent call last):
+  File "/media/sdb1/gzj/support/llm/envs/paperqa/lib/python3.12/site-packages/litellm/llms/openai/openai.py", line 852, in completion
+    raise e
+  File "/media/sdb1/gzj/support/llm/envs/paperqa/lib/python3.12/site-packages/litellm/llms/openai/openai.py", line 780, in completion
+    ) = self.make_sync_openai_chat_completion_request(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/sdb1/gzj/support/llm/envs/paperqa/lib/python3.12/site-packages/litellm/litellm_core_utils/logging_utils.py", line 344, in sync_wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/media/sdb1/gzj/support/llm/envs/paperqa/lib/python3.12/site-packages/litellm/llms/openai/openai.py", line 503, in make_sync_openai_chat_completion_request
+    raise e
+  File "/media/sdb1/gzj/support/llm/envs/paperqa/lib/python3.12/site-packages/litellm/llms/openai/openai.py", line 478, in make_sync_openai_chat_completion_request
+    raw_response = openai_client.chat.completions.with_raw_response.create(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/sdb1/gzj/support/llm/envs/paperqa/lib/python3.12/site-packages/openai/_legacy_response.py", line 369, in wrapped
+    return cast(LegacyAPIResponse[R], func(*args, **kwargs))
+                                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/media/sdb1/gzj/support/llm/envs/paperqa/lib/python3.12/site-packages/openai/_utils/_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/media/sdb1/gzj/support/llm/envs/paperqa/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py", line 1296, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/media/sdb1/gzj/support/llm/envs/paperqa/lib/python3.12/site-packages/openai/_base_client.py", line 1375, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/sdb1/gzj/support/llm/envs/paperqa/lib/python3.12/site-packages/openai/_base_client.py", line 1148, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.InternalServerError: <html>
+<head><title>504 Gateway Time-out</title></head>
+<body bgcolor="white">
+<center><h1>504 Gateway Time-out</h1></center>
+<hr><center>alb</center>
+</body>
+</html>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/media/sdb1/gzj/support/llm/envs/paperqa/lib/python3.12/site-packages/litellm/main.py", line 2707, in completion
+    raise e
+  File "/media/sdb1/gzj/support/llm/envs/paperqa/lib/python3.12/site-packages/litellm/main.py", line 2679, in completion
+    response = openai_chat_completions.completion(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/sdb1/gzj/support/llm/envs/paperqa/lib/python3.12/site-packages/litellm/llms/openai/openai.py", line 863, in completion
+    raise OpenAIError(
+litellm.llms.openai.common_utils.OpenAIError: <html>
+<head><title>504 Gateway Time-out</title></head>
+<body bgcolor="white">
+<center><h1>504 Gateway Time-out</h1></center>
+<hr><center>alb</center>
+</body>
+</html>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/media/sdb1/gzj/support/llm/rscd/dbg_bit.py", line 9, in <module>
+    r=litellm.completion(model='openai/kimi-k2.6',api_key=API_KEY,api_base=API_BASE,messages=[{'role':'user','content':prompt+'\n\n论文全文：\n'+text}],temperature=0.0,max_tokens=3000,extra_body={'enable_thinking':False})
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/sdb1/gzj/support/llm/envs/paperqa/lib/python3.12/site-packages/litellm/utils.py", line 1772, in wrapper
+    raise e
+  File "/media/sdb1/gzj/support/llm/envs/paperqa/lib/python3.12/site-packages/litellm/utils.py", line 1593, in wrapper
+    result = original_function(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/sdb1/gzj/support/llm/envs/paperqa/lib/python3.12/site-packages/litellm/main.py", line 4420, in completion
+    raise exception_type(
+          ^^^^^^^^^^^^^^^
+  File "/media/sdb1/gzj/support/llm/envs/paperqa/lib/python3.12/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2466, in exception_type
+    raise e
+  File "/media/sdb1/gzj/support/llm/envs/paperqa/lib/python3.12/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 624, in exception_type
+    raise Timeout(
+litellm.exceptions.Timeout: litellm.Timeout: Timeout Error: OpenAIException - <html>
+<head><title>504 Gateway Time-out</title></head>
+<body bgcolor="white">
+<center><h1>504 Gateway Time-out</h1></center>
+<hr><center>alb</center>
+</body>
+</html>

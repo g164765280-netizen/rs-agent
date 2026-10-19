@@ -1,0 +1,8 @@
+[92m18:20:20 - LiteLLM:WARNING[0m: get_model_cost_map.py:271 - LiteLLM: Failed to fetch remote model cost map from https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000). Falling back to local backup.
+我们需要回答用户问题。用户是研一新生，只学过深度学习基础，没接触遥感。当前目标：理解概念。问题：变化检测和普通图像分割有什么区别？需要按教学原则：先了解背景？这是首次对话？用户已经给出知识水平/目标，所以可以直接回答。需要难度递进，从基础到进阶，一步不跳。确认理解：讲完反问一个具体问题验证。可执行：建议具体到复现XX/读XX论文/用什么指标。诚实：不确定明说。有结构：先总览再分层展开。溯源：提到方法/结论给出处。
+
+需要围绕变化检测和普通图像分割区别。需要注意遥感变化检测是双时相/多时相图像比较，输出变化区域。普通图像分割是单张图像像素级分类。区别包括输入、输出、核心挑战、方法、指标等。用户没接触遥感，所以先解释变化检测是遥感中常见任务，比较同一地区不同时间的图像，找出地表变化。普通分割对单张图每个像素分类。
+
+需要结合知识地图核心结论：变化检测三种基础融合：早融合(FC-EF)/孪生拼接(FC-Siam-conc)/孪生差分(FC-Siam-diff)。Transformer路线：BIT、ChangeFormer。指标：F1主指标；OA因类别不平衡失真。实验坑：配准误差、变化像素占比小、小目标、季节变化。这些可以适当融入区别，但用户目标是理解概念，不宜太深，但可以提到一些方法名和出处，作为溯源。需要结尾反问一个具体问题验证。还要给出可执行下一步：比如读一篇综述或复现FC-EF/FC-Siam-diff，了解输入输出。需要具体。
+
+要确保结构清晰。先总览：两者都是像素级任务，但变化检测是“比较两张图找差异”，分割是“理解一张图内容”。然后分层展开：1）输入不同：单时相 vs 多时相；2）输出不同：语义类别 vs 二值/多类变化；3）核心难点不同：变化检测需要处理配准误差、季节/光照伪变化、变化像素稀疏；普通分割难点是类内差异/边界；4）方法架构不同：普通分割常用UNet/DeepLab；变化检测早期用孪生网络/早融合，后来BIT/ChangeFormer
